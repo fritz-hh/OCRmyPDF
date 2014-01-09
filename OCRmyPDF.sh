@@ -221,7 +221,7 @@ numpages=`tail -n 1 "$FILE_PAGES_INFO" | cut -f1 -d" "`
 # process each page of the input pdf file
 parallel -q -k --halt-on-error 1 "$OCR_PAGE" "$FILE_INPUT_PDF" "{}" "$numpages" "$TMP_FLD" \
 	"$VERBOSITY" "$LAN" "$KEEP_TMP" "$PREPROCESS_DESKEW" "$PREPROCESS_CLEAN" "$PREPROCESS_CLEANTOPDF" "$OVERSAMPLING_DPI" \
-	"$PDF_NOIMG" "$TESS_CFG_FILES" "$FORCE_OCR" < "$FILE_PAGES_INFO"
+	"$PDF_NOIMG" "\"$TESS_CFG_FILES\"" "$FORCE_OCR" < "$FILE_PAGES_INFO"
 ret_code="$?"
 [ $ret_code -ne 0 ] && exit $ret_code 
 
