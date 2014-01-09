@@ -3,6 +3,9 @@
 # Copyright (c) 2013-14: fritz-hh from Github (https://github.com/fritz-hh)
 ##############################################################################
 
+# Don't allow unset variables
+set -o nounset
+
 # Import required scripts
 . "`dirname $0`/src/config.sh"
 
