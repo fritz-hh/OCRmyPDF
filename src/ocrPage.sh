@@ -5,6 +5,9 @@
 # Copyright (c) 2013-14: fritz-hh from Github (https://github.com/fritz-hh)
 ##############################################################################
 
+# Don't allow unset variables
+set -o nounset
+
 . "./src/config.sh"
 
 
