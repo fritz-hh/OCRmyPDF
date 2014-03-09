@@ -47,7 +47,7 @@ def PIL_imagedata(self):
 
 	from reportlab.lib.utils import import_zlib
 	from reportlab import rl_config
-	from reportlab.pdfbase.pdfutils import _AsciiBase85Encode, _chunker
+	from reportlab.pdfbase.pdfutils import asciiBase85Encode, _chunker
 
 	self.source = 'PIL'
 	zlib = import_zlib()
@@ -89,7 +89,7 @@ def PIL_imagedata(self):
 
 	if rl_config.useA85:
 		# ...sadly this may not be
-		data = _AsciiBase85Encode(data)
+		data = asciiBase85Encode(data)
 	# append in blocks of 60 characters
 	_chunker(data, imagedata)
 	imagedata.append('EI')
