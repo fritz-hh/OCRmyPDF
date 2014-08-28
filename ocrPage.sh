@@ -5,7 +5,7 @@
 # Copyright (c) 2013-14: fritz-hh from Github (https://github.com/fritz-hh)
 ##############################################################################
 
-. "./src/config.sh"
+. "`dirname $(realpath $0)`/config.sh"
 
 
 # Initialization of variables passed by arguments
