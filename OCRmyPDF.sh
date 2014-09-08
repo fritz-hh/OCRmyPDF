@@ -4,7 +4,7 @@
 ##############################################################################
 
 # Import required scripts
-. "`dirname $0`/src/config.sh"
+. "`dirname $(realpath $0)`/config.sh"
 
 # Set variables corresponding to the input parameters
 ARGUMENTS="$@"

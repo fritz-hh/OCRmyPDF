@@ -26,7 +26,7 @@ LOG_INFO="2"				# error messages, warnings and some infos
 LOG_DEBUG="3"				# debug level logging
 
 # various paths
-SRC="./src"				# location of the source folder (except source of external tools like jhove)
+SRC="`dirname $(realpath $0)`"		# location of the source folder
 OCR_PAGE="$SRC/ocrPage.sh"		# path to the script aimed at OCRing one page
-JHOVE="./jhove/bin/JhoveApp.jar"	# java SW for validating the final PDF/A
-JHOVE_CFG="./jhove/conf/jhove.conf"	# location of the jhove config file
+JHOVE="$SRC/jhove/bin/JhoveApp.jar"	# java SW for validating the final PDF/A
+JHOVE_CFG="$SRC/jhove/conf/jhove.conf"	# location of the jhove config file
