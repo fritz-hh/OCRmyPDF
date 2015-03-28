@@ -49,12 +49,12 @@ sh ./OCRmyPDF.sh -h
 If not yet installed, the script will notify you about dependencies that need to be installed.
 The script requires specific versions of the dependencies. Older version than the ones mentioned in the release notes are likely not to be compatible to OCRmyPDF.
 
-## Docker container
+### Docker container
 
 A Docker container is [also available](https://registry.hub.docker.com/u/paulstaab/ocrmypdf/). This includes all of the dependencies and may be easier to set up.
-1. Install [Docker](https://docs.docker.com/installation/) for your platform
-2. Run `docker pull paulstaab/ocrmypdf
-3. To run OCR on a PDF, call:
+- Install [Docker](https://docs.docker.com/installation/) for your platform
+- Run `docker pull paulstaab/ocrmypdf
+- To run OCR on a PDF, call:
 ```shell
 docker run -t -i -v "</path/to/pdfdir>:/home/docker/" paulstaab/ocrmypdf \
   OCRmyPDF <additional options> <pdf> <out.pdf>
