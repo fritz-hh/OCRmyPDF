@@ -41,7 +41,8 @@ Download OCRmyPDF here: https://github.com/fritz-hh/OCRmyPDF/releases
 
 Copy the file in onto your Linux/*nix machine and extract it.
 
-For usage information, run: ```shell
+For usage information, run: 
+```shell
 sh ./OCRmyPDF.sh -h
 ```
 
