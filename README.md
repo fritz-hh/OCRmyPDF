@@ -39,12 +39,32 @@ Install
 
 Download OCRmyPDF here: https://github.com/fritz-hh/OCRmyPDF/releases
 
-Copy the file in onto your linux/unix machine and extract it.
+Copy the file in onto your Linux/*nix machine and extract it.
 
-Run: "sh ./OCRmyPDF.sh -h" to get the script usage
+For usage information, run: ```shell
+sh ./OCRmyPDF.sh -h
+```
 
 If not yet installed, the script will notify you about dependencies that need to be installed.
 The script requires specific versions of the dependencies. Older version than the ones mentioned in the release notes are likely not to be compatible to OCRmyPDF.
+
+## Docker container
+
+A Docker container is [also available](https://registry.hub.docker.com/u/paulstaab/ocrmypdf/). This includes all of the dependencies and may be easier to set up.
+1. Install [Docker](https://docs.docker.com/installation/) for your platform
+2. Run `docker pull paulstaab/ocrmypdf
+3. To run OCR on a PDF, call:
+```shell
+docker run -t -i -v "</path/to/pdfdir>:/home/docker/" paulstaab/ocrmypdf \
+  OCRmyPDF <additional options> <pdf> <out.pdf>
+```
+
+For example:
+```shell
+cd /home/user/Documents/PDFs
+docker run -t -i -v "/home/user/Documents/PDFs:/home/docker/" paulstaab/ocrmypdf \
+  OCRmyPDF test.pdf test_ocr.pdf
+```
 
 Support
 -------
